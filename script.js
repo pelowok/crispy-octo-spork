@@ -27,8 +27,6 @@ function generateImage(description) {
       const apiKey = 'API_KEY'; // Replace with your actual API key
       const url = 'https://api.openai.com/v1/images/generate'; // Replace with the actual DALL-E 3 endpoint
 
-
-
       fetch(url, {
           method: 'POST',
           headers: {
