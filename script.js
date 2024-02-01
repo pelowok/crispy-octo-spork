@@ -19,7 +19,7 @@ function generateAndAddCharacterCard(character) {
 
 function generateImage(description) {
   return new Promise((resolve, reject) => {
-      const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+      const apiKey = process.env.YOUR_API_KEY; // Replace with your actual API key
       const url = 'https://api.openai.com/v1/images/generate'; // Replace with the actual DALL-E 3 endpoint
 
       console.trace(apiKey);
