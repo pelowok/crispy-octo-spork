@@ -21,7 +21,7 @@ function generateAndAddCharacterCard(character) {
 
 function generateImage(description) {
 
-  console.log('api keys: ' + process.env.keys());
+  console.log('api keys: ' + process.env.YOUR_API_KEY);
 
   return new Promise((resolve, reject) => {
 
