@@ -1,5 +1,6 @@
 // CHAT COMPLETIONS
-import OpenAI from "openai";
+// import OpenAI from "openai";
+const { Configuration, OpenAIApi } = require("openai");
 
 const openai = new OpenAI();
 
