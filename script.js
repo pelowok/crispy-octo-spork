@@ -1,6 +1,3 @@
-require('dotenv').config();
-console.log(process.env) // remove this after you've confirmed it is working
-
 document.addEventListener('DOMContentLoaded', function() {
   var characters = [
       { name: "Aelar the Wise", description: "An ancient elf known for his wisdom and magical prowess." },
@@ -21,40 +18,15 @@ function generateAndAddCharacterCard(character) {
 }
 
 function generateImage(description) {
-
-  console.log('api keys: ' + process.env.YOUR_API_KEY);
-
-  return new Promise((resolve, reject) => {
-
-    // console.log('api key: ' + process.env.YOUR_API_KEY);
-
-
-      const apiKey = 'API_KEY'; // Replace with your actual API key
-      const url = 'https://api.openai.com/v1/images/generate'; // Replace with the actual DALL-E 3 endpoint
-
-      fetch(url, {
-          method: 'POST',
-          headers: {
-              'Authorization': `Bearer ${apiKey}`,
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-              prompt: description, // Your image description
-              // Add other necessary parameters according to the API documentation
-          })
-      })
-      .then(response => response.json())
-      .then(data => {
-          const imageUrl = data.result; // Modify according to the actual response structure
-          resolve(imageUrl);
-      })
-      .catch(error => {
-          console.error('Error generating image:', error);
-          reject(error);
-      });
+  // This is a mock function. Replace it with actual API call to generate images.
+  return new Promise(resolve => {
+      // Simulate an API call with a timeout
+      setTimeout(() => {
+          const mockImageUrl = "path-to-generated-image.jpg"; // Replace this with the actual image URL from the API response
+          resolve(mockImageUrl);
+      }, 1000); // Simulates async API call delay
   });
 }
-
 
 function addCharacterCard(name, description, imageUrl) {
   var container = document.getElementById('characterContainer');
