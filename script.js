@@ -9,7 +9,22 @@ document.addEventListener('DOMContentLoaded', function() {
   characters.forEach(function(character) {
       generateAndAddCharacterCard(character);
   });
+
+  $.getJSON( "/data.json", function( data ) {
+    console.log(data);
+    $("#text").html(data["text"]);
+  });
+
 });
+
+
+// $().ready(function(){
+  // $.getJSON( "/data.json", function( data ) {
+  //   console.log(data);
+  //   $("#text").html(data["text"]);
+  // });
+// });
+
 
 function generateAndAddCharacterCard(character) {
   generateImage(character.description).then(imageUrl => {
