@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+  $.getJSON( "/data.json", function( data ) {
+    console.log(data);
+    $("#text").html(data["text"]);
+  });
+
   var characters = [
       { name: "Aelar the Wise", description: "An ancient elf known for his wisdom and magical prowess." },
       { name: "Brogan Ironfist", description: "A dwarf warrior with unmatched strength and a heart of gold." },
@@ -10,21 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       generateAndAddCharacterCard(character);
   });
 
-  $.getJSON( "/data.json", function( data ) {
-    console.log(data);
-    $("#text").html(data["text"]);
-  });
-
 });
-
-
-// $().ready(function(){
-  // $.getJSON( "/data.json", function( data ) {
-  //   console.log(data);
-  //   $("#text").html(data["text"]);
-  // });
-// });
-
 
 function generateAndAddCharacterCard(character) {
   generateImage(character.description).then(imageUrl => {
