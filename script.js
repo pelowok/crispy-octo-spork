@@ -29,7 +29,7 @@ function generateImage(description) {
   return new Promise(resolve => {
       // Simulate an API call with a timeout
       setTimeout(() => {
-          const mockImageUrl = "path-to-generated-image.jpg"; // Replace this with the actual image URL from the API response
+          const mockImageUrl = "/img/test.jpg"; // Replace this with the actual image URL from the API response
           resolve(mockImageUrl);
       }, 1000); // Simulates async API call delay
   });
