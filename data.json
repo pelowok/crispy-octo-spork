@@ -288,8 +288,7 @@
               "armorType": "Leather Armor",
               "martialWeaponType": "Spear",
               "rangedWeaponType": "Shortbow"
-            },
-            // Details for Guards B-F follow a similar structure, with varied attributes
+            }
           ]
         },
         "WagonDefense": {
