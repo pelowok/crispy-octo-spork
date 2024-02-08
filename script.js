@@ -58,59 +58,35 @@ function addCharacterCard(name, description, imageUrl) {
   container.appendChild(card);
 }
 
-// Initialize myWagons as an empty array
 let myWagons = [];
 
-fetch('data.json') // Fetch data from data.json located in the same folder
-  .then(response => {
-    // Check if the response is ok (status in the range 200-299)
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
-    }
-    return response.json(); // Parse JSON data from the response
-  })
+fetch('data.json')
+  .then(response => response.json())
   .then(data => {
-    myWagons = data.Wagons; // Assume data.json has a "Wagons" property that is an array
-    console.log(myWagons); // Log the populated array to confirm
+    myWagons = data.Wagons;
+    myWagons.forEach(wagon => {
+      const card = document.createElement('div');
+      let cargoDetails = wagon.Cargo.map(item => `${item.name}, Value: ${item.value}, Condition: ${item.condition}, Origin: ${item.placeOfOrigin}`).join('; ');
+      let passengerDetails = wagon.Passengers.map(passenger => `${passenger.name}, ${passenger.race}, ${passenger.profession}, Destination: ${passenger.destination}`).join('; ');
+      let securityDetails = `Bodyguard - ${wagon.Security.Bodyguard.name}, Captain - ${wagon.Security.Captain.name}, Guards: ${wagon.Security.Guards.quantity}, Defense: ${wagon.Security.WagonDefense.type}`;
+      let crewDetails = `Teamster - ${wagon.Crew.Teamster.name}, Coachman - ${wagon.Crew.Coachman.name}, Footman - ${wagon.Crew.Footman.name}`;
 
-    // Here, you can now use the myWagons array as needed
-    // For example, return it, use it in a function, or manipulate the DOM based on its contents
-
-    // Example: return myWagons; (Note: This return statement would only work directly within an async function or a thenable chain)
+      card.innerHTML = `
+        <h2>${wagon.name} - ${wagon.type}</h2>
+        <p>Origin: ${wagon.placeOfOrigin}</p>
+        <p>Destination: ${wagon.destination}</p>
+        <p>Owner: ${wagon.Owner.name}, ${wagon.Owner.race}, ${wagon.Owner.profession}</p>
+        <p>WagonMaster: ${wagon.WagonMaster.name}, ${wagon.WagonMaster.race}, ${wagon.WagonMaster.class}</p>
+        <p>Cargo: ${cargoDetails}</p>
+        <p>Security: ${securityDetails}</p>
+        <p>Crew: ${crewDetails}</p>
+        <p>Passengers: ${passengerDetails}</p>
+      `;
+      document.body.appendChild(card);
+    });
   })
-  .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
-  });
+  .catch(error => console.error(error));
 
-// Note: This fetch operation is asynchronous.
-// Any code that depends on myWagons being fully populated should be placed
-// within the last .then() block or adequately handled with async/await syntax in an async function.
-
-
-// Assuming myWagons is your JSON object
-// const wagonsArray = myWagons.Wagons.map(wagon => {
-//   return {
-//     name: wagon.name,
-//     type: wagon.type,
-//     placeOfOrigin: wagon.placeOfOrigin,
-//     destination: wagon.destination,
-//     Owner: `${wagon.Owner.name}, ${wagon.Owner.race}, ${wagon.Owner.profession}, Age: ${wagon.Owner.age}, ${wagon.Owner.motivation}`,
-//     WagonMaster: `${wagon.WagonMaster.name}, ${wagon.WagonMaster.race}, ${wagon.WagonMaster.class}, Age: ${wagon.WagonMaster.age}, ${wagon.WagonMaster.motivation}`,
-//     Cargo: wagon.Cargo.map(cargo => `${cargo.name}, Value: ${cargo.value}, Condition: ${cargo.condition}, Origin: ${cargo.placeOfOrigin}`).join('; '),
-//     Security: {
-//       Bodyguard: `${wagon.Security.Bodyguard.name}, ${wagon.Security.Bodyguard.weapon}, Armor Class: ${wagon.Security.Bodyguard.armorClass}`,
-//       Captain: `${wagon.Security.Captain.name}, ${wagon.Security.Captain.weapon}, Armor Class: ${wagon.Security.Captain.armorClass}`,
-//       GuardsQuantity: wagon.Security.Guards.quantity,
-//       WagonDefense: wagon.Security.WagonDefense.type
-//     },
-//     Crew: {
-//       Teamster: `${wagon.Crew.Teamster.name}, Race: ${wagon.Crew.Teamster.race}, Age: ${wagon.Crew.Teamster.age}`,
-//       Coachman: `${wagon.Crew.Coachman.name}, Race: ${wagon.Crew.Coachman.race}, Age: ${wagon.Crew.Coachman.age}`,
-//       Footman: `${wagon.Crew.Footman.name}, Race: ${wagon.Crew.Footman.race}, Age: ${wagon.Crew.Footman.age}`
-//     },
-//     Passengers: wagon.Passengers.map(passenger => `${passenger.name}, ${passenger.race}, ${passenger.profession}, Destination: ${passenger.destination}`).join('; ')
-//   };
-// });
 
 // Now, wagonsArray contains all the necessary details for each wagon
 // You can iterate over this array to create HTML cards
@@ -118,7 +94,7 @@ fetch('data.json') // Fetch data from data.json located in the same folder
 // Example of creating HTML cards
 const container = document.getElementById('wagonsContainer'); // Assuming you have a div with this ID in your HTML
 
-wagonsArray.forEach(wagon => {
+myWagons.forEach(wagon => {
   const wagonCard = document.createElement('div');
   wagonCard.className = 'wagon-card';
   wagonCard.innerHTML = `
