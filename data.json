@@ -1,3 +1,68 @@
 {
-  "myText" : "Hot potato supplied in the JSON file"
+  "Wagons": [
+    {
+      "name": "The Red Dragon",
+      "type": "Cargo",
+      "placeOfOrigin": "Waterdeep",
+      "destination": "Neverwinter",
+      "Owner": {
+        "name": "Eldon Elm",
+        "race": "Elf",
+        "profession": "Merchant",
+        "age": 137,
+        "physicalDescription": "Tall and slender with piercing green eyes",
+        "motivation": "Seeking ancient artifacts",
+        "secret": "Afraid of the dark",
+        "flaw": "Too trusting"
+      },
+      "WagonMaster": {
+        "name": "Thom Lightfoot",
+        "race": "Halfling",
+        "class": "Rogue",
+        "age": 25,
+        "physicalDescription": "Small and quick, with a mischievous smile",
+        "motivation": "To amass a fortune",
+        "secret": "Is a wanted man in three cities",
+        "flaw": "Greedy",
+        "magicalPower": "Can become invisible once a day"
+      },
+      "Cargo": [
+        {
+          "name": "Mystic spices",
+          "value": 500.0,
+          "condition": "Good",
+          "description": "Rare spices with healing properties",
+          "placeOfOrigin": "The southern isles"
+        }
+      ],
+      "Security": {
+        "Bodyguard": {
+          "name": "Kara Strongarm",
+          "race": "Human",
+          "class": "Warrior",
+          "weapon": "Broad sword",
+          "bonusDamage": 5,
+          "magicalEquipment": "Cloak of invisibility",
+          "armorClass": 15
+        },
+        "Captain": {
+          "name": "Jorin the Brave",
+          "race": "Dwarf",
+          "class": "Paladin",
+          "weapon": "Warhammer",
+          "bonusDamage": 8,
+          "magicalEquipment": "Shield of light",
+          "armorClass": 18
+        },
+        "Guards": {
+          "quantity": 4
+          // Example for detailed Guard records omitted for brevity
+        },
+        "WagonDefense": {
+          "type": "Magic barriers"
+        }
+      },
+      // Other entity details like Crew and Passengers omitted for brevity
+    },
+  ]
 }
