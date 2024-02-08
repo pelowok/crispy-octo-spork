@@ -31,7 +31,7 @@ body {
   margin-top: 15px;
 }
 
-.wagon-card {
+#wagon-card {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 10px;
