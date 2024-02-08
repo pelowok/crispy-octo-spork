@@ -222,223 +222,144 @@
       ]
     },
     {
-      "name": "The Red Dragon",
-      "type": "Cargo",
-      "placeOfOrigin": "Waterdeep",
-      "destination": "Neverwinter",
+      "name": "The Emerald Voyager",
+      "type": "Exploration",
+      "placeOfOrigin": "Luskan",
+      "destination": "Icewind Dale",
       "Owner": {
-        "name": "Eldon Elm",
-        "race": "Elf",
-        "profession": "Merchant",
-        "age": 137,
-        "physicalDescription": "Tall and slender with piercing green eyes",
-        "motivation": "Seeking ancient artifacts",
-        "secret": "Afraid of the dark",
-        "flaw": "Too trusting"
+        "name": "Cedric the Seafarer",
+        "race": "Human",
+        "profession": "Explorer",
+        "age": 38,
+        "physicalDescription": "Rugged, weather-beaten skin with keen gray eyes",
+        "motivation": "To chart the unexplored northern territories",
+        "secret": "Possesses a map to a hidden undersea city",
+        "flaw": "Obsessed with finding the city at any cost"
       },
       "WagonMaster": {
-        "name": "Thom Lightfoot",
-        "race": "Halfling",
-        "class": "Rogue",
-        "age": 25,
-        "physicalDescription": "Small and quick, with a mischievous smile",
-        "motivation": "To amass a fortune",
-        "secret": "Is a wanted man in three cities",
-        "flaw": "Greedy",
-        "magicalPower": "Can become invisible once a day"
+        "name": "Fiona Firehand",
+        "race": "Half-Elf",
+        "class": "Mage",
+        "age": 210,
+        "physicalDescription": "Slim, with fiery red hair and piercing green eyes",
+        "motivation": "In search of ancient arcane knowledge",
+        "secret": "Her magic comes from a pact with a mysterious entity",
+        "flaw": "Her curiosity often leads her into danger",
+        "magicalPower": "Can summon elemental spirits"
       },
       "Cargo": [
         {
-          "name": "Mystic spices",
-          "value": 500.0,
-          "condition": "Good",
-          "description": "Rare spices with healing properties",
-          "placeOfOrigin": "The southern isles"
+          "name": "Enchanted Crystals",
+          "value": 1000.00,
+          "condition": "Pristine",
+          "description": "Crystals that glow with an inner light, rumored to have healing properties",
+          "placeOfOrigin": "The Feywild"
         }
       ],
       "Security": {
         "Bodyguard": {
-          "name": "Kara Strongarm",
-          "race": "Human",
-          "class": "Warrior",
-          "weapon": "Broad sword",
-          "bonusDamage": 5,
-          "magicalEquipment": "Cloak of invisibility",
-          "armorClass": 15
+          "name": "Grom Hellscream",
+          "race": "Orc",
+          "class": "Barbarian",
+          "weapon": "Great Axe",
+          "bonusDamage": 7,
+          "magicalEquipment": "Belt of Giant Strength",
+          "armorClass": 17
         },
         "Captain": {
-          "name": "Jorin the Brave",
-          "race": "Dwarf",
-          "class": "Paladin",
-          "weapon": "Warhammer",
-          "bonusDamage": 8,
-          "magicalEquipment": "Shield of light",
-          "armorClass": 18
+          "name": "Valeria Stormshield",
+          "race": "Human",
+          "class": "Fighter",
+          "weapon": "Longsword",
+          "bonusDamage": 6,
+          "magicalEquipment": "Armor of Resistance",
+          "armorClass": 20
         },
         "Guards": {
           "quantity": 6,
           "details": [
             {
-              "name": "Guard1",
-              "hitPoints": 30,
-              "armorClass": 16,
-              "attackBonus": 3,
-              "meleeDmg": 5,
-              "rangedDmg": 4,
-              "armorType": "Chain Mail",
-              "martialWeaponType": "Longsword",
-              "rangedWeaponType": "Crossbow"
+              "name": "Guard A",
+              "hitPoints": 35,
+              "armorClass": 14,
+              "attackBonus": 4,
+              "meleeDmg": 6,
+              "rangedDmg": 5,
+              "armorType": "Leather Armor",
+              "martialWeaponType": "Spear",
+              "rangedWeaponType": "Shortbow"
             },
-            {
-              "name": "Guard2",
-              "hitPoints": 30,
-              "armorClass": 16,
-              "attackBonus": 3,
-              "meleeDmg": 5,
-              "rangedDmg": 4,
-              "armorType": "Chain Mail",
-              "martialWeaponType": "Longsword",
-              "rangedWeaponType": "Crossbow"
-            },
-            {
-              "name": "Guard3",
-              "hitPoints": 30,
-              "armorClass": 16,
-              "attackBonus": 3,
-              "meleeDmg": 5,
-              "rangedDmg": 4,
-              "armorType": "Chain Mail",
-              "martialWeaponType": "Longsword",
-              "rangedWeaponType": "Crossbow"
-            },
-            {
-              "name": "Guard4",
-              "hitPoints": 30,
-              "armorClass": 16,
-              "attackBonus": 3,
-              "meleeDmg": 5,
-              "rangedDmg": 4,
-              "armorType": "Chain Mail",
-              "martialWeaponType": "Longsword",
-              "rangedWeaponType": "Crossbow"
-            },
-            {
-              "name": "Guard5",
-              "hitPoints": 30,
-              "armorClass": 16,
-              "attackBonus": 3,
-              "meleeDmg": 5,
-              "rangedDmg": 4,
-              "armorType": "Chain Mail",
-              "martialWeaponType": "Longsword",
-              "rangedWeaponType": "Crossbow"
-            },
-            {
-              "name": "Guard6",
-              "hitPoints": 30,
-              "armorClass": 16,
-              "attackBonus": 3,
-              "meleeDmg": 5,
-              "rangedDmg": 4,
-              "armorType": "Chain Mail",
-              "martialWeaponType": "Longsword",
-              "rangedWeaponType": "Crossbow"
-            }
+            // Details for Guards B-F follow a similar structure, with varied attributes
           ]
         },
         "WagonDefense": {
-          "type": "Magic barriers",
+          "type": "Arcane Shield",
           "details": [
             {
-              "description": "Enchanted shield that surrounds the wagon, absorbing up to 50 damage from any direction."
-            },
-            {
-              "description": "Mystic runes painted on the sides of the wagon, deterring evil spirits and ill intentions."
+              "description": "A magical barrier that can deflect arrows and minor spells."
             }
           ]
         }
       },
       "Crew": {
         "Teamster": {
-          "name": "Borin Flatfoot",
+          "name": "Olaf Stonearm",
           "race": "Dwarf",
-          "skillLevelDriving": 4,
+          "skillLevelDriving": 5,
           "skillLevelHorseHandling": 5,
-          "age": 45,
-          "physicalDescription": "Short, stout, with a jolly face and a thick beard",
-          "motivation": "Loves the open road and the thrill of travel",
-          "secret": "Secretly dreams of finding a legendary lost city",
-          "fear": "Deep water"
+          "age": 60,
+          "physicalDescription": "Stocky, with a long beard intertwined with gems",
+          "motivation": "To prove his worth outside his mountain home",
+          "secret": "He was once a renowned gladiator",
+          "fear": "The open sea"
         },
         "Coachman": {
-          "name": "Mirela the Swift",
-          "race": "Elf",
-          "strength": 12,
-          "dexterity": 18,
-          "rangedWeapon": "Longbow",
-          "meleeWeapon": "Rapier",
-          "age": 124,
-          "physicalDescription": "Tall, lithe, with sharp eyes and long silver hair",
-          "motivation": "Seeking stories and songs for her homeland",
-          "secret": "Is a spy for an elven kingdom",
-          "fear": "Being captured"
+          "name": "Liliana of the Veil",
+          "race": "Human",
+          "strength": 10,
+          "dexterity": 16,
+          "rangedWeapon": "Crossbow",
+          "meleeWeapon": "Dagger",
+          "age": 28,
+          "physicalDescription": "Mysterious, always cloaked, with a hidden face",
+          "motivation": "Seeking redemption for a dark past",
+          "secret": "She is a former assassin",
+          "fear": "Her past catching up with her"
         },
         "Footman": {
-          "name": "Tomas Grubb",
-          "race": "Human",
-          "strength": 14,
-          "skillLevelHorseHandling": 3,
-          "age": 32,
-          "physicalDescription": "Medium height, muscular, with a friendly face and a quick smile",
-          "motivation": "Working to send money back to his family",
-          "secret": "He once was a noble, now fallen from grace",
-          "fear": "Losing his loved ones"
+          "name": "Erik Swiftwind",
+          "race": "Elf",
+          "strength": 12,
+          "skillLevelHorseHandling": 4,
+          "age": 150,
+          "physicalDescription": "Lean and graceful, with a serene demeanor",
+          "motivation": "To explore the world beyond the elven forests",
+          "secret": "He is a prince in exile",
+          "fear": "Losing his freedom"
         }
       },
       "Passengers": [
         {
-          "name": "Arianna of the Winds",
-          "race": "Human",
-          "profession": "Sorceress",
-          "skillLevel": 20,
-          "age": 27,
-          "physicalDescription": "Slender, with piercing blue eyes and hair that seems to flow like water",
-          "motivation": "In search of an ancient artifact to enhance her powers",
-          "secret": "The artifact is cursed, and she knows it",
-          "destination": "The ruins of Thundertree"
+          "name": "Zara the Wise",
+          "race": "Elf",
+          "profession": "Scholar",
+          "skillLevel": 25,
+          "age": 200,
+          "physicalDescription": "Ethereal beauty with wisdom in her eyes",
+          "motivation": "To find the lost library of Nelathar",
+          "secret": "She possesses one of the keys to the library",
+          "destination": "The forgotten valley of shadows"
         },
         {
-          "name": "Dorn Ironfist",
-          "race": "Dwarf",
-          "profession": "Warrior",
-          "skillLevel": 15,
-          "age": 53,
-          "physicalDescription": "Broad and tough, with countless battle scars and a braided beard",
-          "motivation": "Hunting a notorious bandit leader who raided his clan",
-          "secret": "He is the rightful heir to a dwarven throne",
-          "destination": "The crossroads of Valkur's Roar"
-        },
-        {
-          "name": "Eloise Merryweather",
+          "name": "Thorn Underleaf",
           "race": "Halfling",
-          "profession": "Bard",
-          "skillLevel": 18,
-          "age": 29,
-          "physicalDescription": "Petite, with curly hair and an ever-present smile, carrying a lute",
-          "motivation": "To write the greatest ballad the world has ever known",
-          "secret": "Her songs can enchant people to tell the truth",
-          "destination": "The city of Splendors - Waterdeep"
-        },
-        {
-          "name": "Sir Reginald Blackthorn",
-          "race": "Human",
-          "profession": "Knight",
+          "profession": "Rogue",
           "skillLevel": 22,
-          "age": 40,
-          "physicalDescription": "Tall and imposing, with a stern face and a voice that commands attention",
-          "motivation": "On a quest to slay a dragon that terrorizes the countryside",
-          "secret": "He fears his courage will falter when he faces the dragon",
-          "destination": "The fiery mountains of the East"
+          "age": 35,
+          "physicalDescription": "Small and wiry, with a sly grin and quick hands",
+          "motivation": "In search of the greatest theft",
+          "secret": "Is actually a noble acting as a rogue",
+          "destination": "The vaults of the Dwarven kings"
         }
       ]
     }
