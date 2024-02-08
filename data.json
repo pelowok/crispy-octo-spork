@@ -55,14 +55,392 @@
           "armorClass": 18
         },
         "Guards": {
-          "quantity": 4
-          // Example for detailed Guard records omitted for brevity
+          "quantity": 6,
+          "details": [
+            {
+              "name": "Guard1",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard2",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard3",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard4",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard5",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard6",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            }
+          ]
         },
         "WagonDefense": {
-          "type": "Magic barriers"
+          "type": "Magic barriers",
+          "details": [
+            {
+              "description": "Enchanted shield that surrounds the wagon, absorbing up to 50 damage from any direction."
+            },
+            {
+              "description": "Mystic runes painted on the sides of the wagon, deterring evil spirits and ill intentions."
+            }
+          ]
         }
       },
-      // Other entity details like Crew and Passengers omitted for brevity
+      "Crew": {
+        "Teamster": {
+          "name": "Borin Flatfoot",
+          "race": "Dwarf",
+          "skillLevelDriving": 4,
+          "skillLevelHorseHandling": 5,
+          "age": 45,
+          "physicalDescription": "Short, stout, with a jolly face and a thick beard",
+          "motivation": "Loves the open road and the thrill of travel",
+          "secret": "Secretly dreams of finding a legendary lost city",
+          "fear": "Deep water"
+        },
+        "Coachman": {
+          "name": "Mirela the Swift",
+          "race": "Elf",
+          "strength": 12,
+          "dexterity": 18,
+          "rangedWeapon": "Longbow",
+          "meleeWeapon": "Rapier",
+          "age": 124,
+          "physicalDescription": "Tall, lithe, with sharp eyes and long silver hair",
+          "motivation": "Seeking stories and songs for her homeland",
+          "secret": "Is a spy for an elven kingdom",
+          "fear": "Being captured"
+        },
+        "Footman": {
+          "name": "Tomas Grubb",
+          "race": "Human",
+          "strength": 14,
+          "skillLevelHorseHandling": 3,
+          "age": 32,
+          "physicalDescription": "Medium height, muscular, with a friendly face and a quick smile",
+          "motivation": "Working to send money back to his family",
+          "secret": "He once was a noble, now fallen from grace",
+          "fear": "Losing his loved ones"
+        }
+      },
+      "Passengers": [
+        {
+          "name": "Arianna of the Winds",
+          "race": "Human",
+          "profession": "Sorceress",
+          "skillLevel": 20,
+          "age": 27,
+          "physicalDescription": "Slender, with piercing blue eyes and hair that seems to flow like water",
+          "motivation": "In search of an ancient artifact to enhance her powers",
+          "secret": "The artifact is cursed, and she knows it",
+          "destination": "The ruins of Thundertree"
+        },
+        {
+          "name": "Dorn Ironfist",
+          "race": "Dwarf",
+          "profession": "Warrior",
+          "skillLevel": 15,
+          "age": 53,
+          "physicalDescription": "Broad and tough, with countless battle scars and a braided beard",
+          "motivation": "Hunting a notorious bandit leader who raided his clan",
+          "secret": "He is the rightful heir to a dwarven throne",
+          "destination": "The crossroads of Valkur's Roar"
+        },
+        {
+          "name": "Eloise Merryweather",
+          "race": "Halfling",
+          "profession": "Bard",
+          "skillLevel": 18,
+          "age": 29,
+          "physicalDescription": "Petite, with curly hair and an ever-present smile, carrying a lute",
+          "motivation": "To write the greatest ballad the world has ever known",
+          "secret": "Her songs can enchant people to tell the truth",
+          "destination": "The city of Splendors - Waterdeep"
+        },
+        {
+          "name": "Sir Reginald Blackthorn",
+          "race": "Human",
+          "profession": "Knight",
+          "skillLevel": 22,
+          "age": 40,
+          "physicalDescription": "Tall and imposing, with a stern face and a voice that commands attention",
+          "motivation": "On a quest to slay a dragon that terrorizes the countryside",
+          "secret": "He fears his courage will falter when he faces the dragon",
+          "destination": "The fiery mountains of the East"
+        }
+      ]
     },
+    {
+      "name": "The Red Dragon",
+      "type": "Cargo",
+      "placeOfOrigin": "Waterdeep",
+      "destination": "Neverwinter",
+      "Owner": {
+        "name": "Eldon Elm",
+        "race": "Elf",
+        "profession": "Merchant",
+        "age": 137,
+        "physicalDescription": "Tall and slender with piercing green eyes",
+        "motivation": "Seeking ancient artifacts",
+        "secret": "Afraid of the dark",
+        "flaw": "Too trusting"
+      },
+      "WagonMaster": {
+        "name": "Thom Lightfoot",
+        "race": "Halfling",
+        "class": "Rogue",
+        "age": 25,
+        "physicalDescription": "Small and quick, with a mischievous smile",
+        "motivation": "To amass a fortune",
+        "secret": "Is a wanted man in three cities",
+        "flaw": "Greedy",
+        "magicalPower": "Can become invisible once a day"
+      },
+      "Cargo": [
+        {
+          "name": "Mystic spices",
+          "value": 500.0,
+          "condition": "Good",
+          "description": "Rare spices with healing properties",
+          "placeOfOrigin": "The southern isles"
+        }
+      ],
+      "Security": {
+        "Bodyguard": {
+          "name": "Kara Strongarm",
+          "race": "Human",
+          "class": "Warrior",
+          "weapon": "Broad sword",
+          "bonusDamage": 5,
+          "magicalEquipment": "Cloak of invisibility",
+          "armorClass": 15
+        },
+        "Captain": {
+          "name": "Jorin the Brave",
+          "race": "Dwarf",
+          "class": "Paladin",
+          "weapon": "Warhammer",
+          "bonusDamage": 8,
+          "magicalEquipment": "Shield of light",
+          "armorClass": 18
+        },
+        "Guards": {
+          "quantity": 6,
+          "details": [
+            {
+              "name": "Guard1",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard2",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard3",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard4",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard5",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            },
+            {
+              "name": "Guard6",
+              "hitPoints": 30,
+              "armorClass": 16,
+              "attackBonus": 3,
+              "meleeDmg": 5,
+              "rangedDmg": 4,
+              "armorType": "Chain Mail",
+              "martialWeaponType": "Longsword",
+              "rangedWeaponType": "Crossbow"
+            }
+          ]
+        },
+        "WagonDefense": {
+          "type": "Magic barriers",
+          "details": [
+            {
+              "description": "Enchanted shield that surrounds the wagon, absorbing up to 50 damage from any direction."
+            },
+            {
+              "description": "Mystic runes painted on the sides of the wagon, deterring evil spirits and ill intentions."
+            }
+          ]
+        }
+      },
+      "Crew": {
+        "Teamster": {
+          "name": "Borin Flatfoot",
+          "race": "Dwarf",
+          "skillLevelDriving": 4,
+          "skillLevelHorseHandling": 5,
+          "age": 45,
+          "physicalDescription": "Short, stout, with a jolly face and a thick beard",
+          "motivation": "Loves the open road and the thrill of travel",
+          "secret": "Secretly dreams of finding a legendary lost city",
+          "fear": "Deep water"
+        },
+        "Coachman": {
+          "name": "Mirela the Swift",
+          "race": "Elf",
+          "strength": 12,
+          "dexterity": 18,
+          "rangedWeapon": "Longbow",
+          "meleeWeapon": "Rapier",
+          "age": 124,
+          "physicalDescription": "Tall, lithe, with sharp eyes and long silver hair",
+          "motivation": "Seeking stories and songs for her homeland",
+          "secret": "Is a spy for an elven kingdom",
+          "fear": "Being captured"
+        },
+        "Footman": {
+          "name": "Tomas Grubb",
+          "race": "Human",
+          "strength": 14,
+          "skillLevelHorseHandling": 3,
+          "age": 32,
+          "physicalDescription": "Medium height, muscular, with a friendly face and a quick smile",
+          "motivation": "Working to send money back to his family",
+          "secret": "He once was a noble, now fallen from grace",
+          "fear": "Losing his loved ones"
+        }
+      },
+      "Passengers": [
+        {
+          "name": "Arianna of the Winds",
+          "race": "Human",
+          "profession": "Sorceress",
+          "skillLevel": 20,
+          "age": 27,
+          "physicalDescription": "Slender, with piercing blue eyes and hair that seems to flow like water",
+          "motivation": "In search of an ancient artifact to enhance her powers",
+          "secret": "The artifact is cursed, and she knows it",
+          "destination": "The ruins of Thundertree"
+        },
+        {
+          "name": "Dorn Ironfist",
+          "race": "Dwarf",
+          "profession": "Warrior",
+          "skillLevel": 15,
+          "age": 53,
+          "physicalDescription": "Broad and tough, with countless battle scars and a braided beard",
+          "motivation": "Hunting a notorious bandit leader who raided his clan",
+          "secret": "He is the rightful heir to a dwarven throne",
+          "destination": "The crossroads of Valkur's Roar"
+        },
+        {
+          "name": "Eloise Merryweather",
+          "race": "Halfling",
+          "profession": "Bard",
+          "skillLevel": 18,
+          "age": 29,
+          "physicalDescription": "Petite, with curly hair and an ever-present smile, carrying a lute",
+          "motivation": "To write the greatest ballad the world has ever known",
+          "secret": "Her songs can enchant people to tell the truth",
+          "destination": "The city of Splendors - Waterdeep"
+        },
+        {
+          "name": "Sir Reginald Blackthorn",
+          "race": "Human",
+          "profession": "Knight",
+          "skillLevel": 22,
+          "age": 40,
+          "physicalDescription": "Tall and imposing, with a stern face and a voice that commands attention",
+          "motivation": "On a quest to slay a dragon that terrorizes the countryside",
+          "secret": "He fears his courage will falter when he faces the dragon",
+          "destination": "The fiery mountains of the East"
+        }
+      ]
+    }
   ]
 }
