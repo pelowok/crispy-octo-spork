@@ -58,32 +58,59 @@ function addCharacterCard(name, description, imageUrl) {
   container.appendChild(card);
 }
 
-let myWagons ={};
+// Initialize myWagons as an empty array
+let myWagons = [];
+
+fetch('data.json') // Fetch data from data.json located in the same folder
+  .then(response => {
+    // Check if the response is ok (status in the range 200-299)
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json(); // Parse JSON data from the response
+  })
+  .then(data => {
+    myWagons = data.Wagons; // Assume data.json has a "Wagons" property that is an array
+    console.log(myWagons); // Log the populated array to confirm
+
+    // Here, you can now use the myWagons array as needed
+    // For example, return it, use it in a function, or manipulate the DOM based on its contents
+
+    // Example: return myWagons; (Note: This return statement would only work directly within an async function or a thenable chain)
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+  });
+
+// Note: This fetch operation is asynchronous.
+// Any code that depends on myWagons being fully populated should be placed
+// within the last .then() block or adequately handled with async/await syntax in an async function.
+
 
 // Assuming myWagons is your JSON object
-const wagonsArray = myWagons.Wagons.map(wagon => {
-  return {
-    name: wagon.name,
-    type: wagon.type,
-    placeOfOrigin: wagon.placeOfOrigin,
-    destination: wagon.destination,
-    Owner: `${wagon.Owner.name}, ${wagon.Owner.race}, ${wagon.Owner.profession}, Age: ${wagon.Owner.age}, ${wagon.Owner.motivation}`,
-    WagonMaster: `${wagon.WagonMaster.name}, ${wagon.WagonMaster.race}, ${wagon.WagonMaster.class}, Age: ${wagon.WagonMaster.age}, ${wagon.WagonMaster.motivation}`,
-    Cargo: wagon.Cargo.map(cargo => `${cargo.name}, Value: ${cargo.value}, Condition: ${cargo.condition}, Origin: ${cargo.placeOfOrigin}`).join('; '),
-    Security: {
-      Bodyguard: `${wagon.Security.Bodyguard.name}, ${wagon.Security.Bodyguard.weapon}, Armor Class: ${wagon.Security.Bodyguard.armorClass}`,
-      Captain: `${wagon.Security.Captain.name}, ${wagon.Security.Captain.weapon}, Armor Class: ${wagon.Security.Captain.armorClass}`,
-      GuardsQuantity: wagon.Security.Guards.quantity,
-      WagonDefense: wagon.Security.WagonDefense.type
-    },
-    Crew: {
-      Teamster: `${wagon.Crew.Teamster.name}, Race: ${wagon.Crew.Teamster.race}, Age: ${wagon.Crew.Teamster.age}`,
-      Coachman: `${wagon.Crew.Coachman.name}, Race: ${wagon.Crew.Coachman.race}, Age: ${wagon.Crew.Coachman.age}`,
-      Footman: `${wagon.Crew.Footman.name}, Race: ${wagon.Crew.Footman.race}, Age: ${wagon.Crew.Footman.age}`
-    },
-    Passengers: wagon.Passengers.map(passenger => `${passenger.name}, ${passenger.race}, ${passenger.profession}, Destination: ${passenger.destination}`).join('; ')
-  };
-});
+// const wagonsArray = myWagons.Wagons.map(wagon => {
+//   return {
+//     name: wagon.name,
+//     type: wagon.type,
+//     placeOfOrigin: wagon.placeOfOrigin,
+//     destination: wagon.destination,
+//     Owner: `${wagon.Owner.name}, ${wagon.Owner.race}, ${wagon.Owner.profession}, Age: ${wagon.Owner.age}, ${wagon.Owner.motivation}`,
+//     WagonMaster: `${wagon.WagonMaster.name}, ${wagon.WagonMaster.race}, ${wagon.WagonMaster.class}, Age: ${wagon.WagonMaster.age}, ${wagon.WagonMaster.motivation}`,
+//     Cargo: wagon.Cargo.map(cargo => `${cargo.name}, Value: ${cargo.value}, Condition: ${cargo.condition}, Origin: ${cargo.placeOfOrigin}`).join('; '),
+//     Security: {
+//       Bodyguard: `${wagon.Security.Bodyguard.name}, ${wagon.Security.Bodyguard.weapon}, Armor Class: ${wagon.Security.Bodyguard.armorClass}`,
+//       Captain: `${wagon.Security.Captain.name}, ${wagon.Security.Captain.weapon}, Armor Class: ${wagon.Security.Captain.armorClass}`,
+//       GuardsQuantity: wagon.Security.Guards.quantity,
+//       WagonDefense: wagon.Security.WagonDefense.type
+//     },
+//     Crew: {
+//       Teamster: `${wagon.Crew.Teamster.name}, Race: ${wagon.Crew.Teamster.race}, Age: ${wagon.Crew.Teamster.age}`,
+//       Coachman: `${wagon.Crew.Coachman.name}, Race: ${wagon.Crew.Coachman.race}, Age: ${wagon.Crew.Coachman.age}`,
+//       Footman: `${wagon.Crew.Footman.name}, Race: ${wagon.Crew.Footman.race}, Age: ${wagon.Crew.Footman.age}`
+//     },
+//     Passengers: wagon.Passengers.map(passenger => `${passenger.name}, ${passenger.race}, ${passenger.profession}, Destination: ${passenger.destination}`).join('; ')
+//   };
+// });
 
 // Now, wagonsArray contains all the necessary details for each wagon
 // You can iterate over this array to create HTML cards
