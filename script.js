@@ -58,6 +58,7 @@ function addCharacterCard(name, description, imageUrl) {
   container.appendChild(card);
 }
 
+var myWagons =[];
 
 // Assuming myWagons is your JSON object
 const wagonsArray = myWagons.Wagons.map(wagon => {
