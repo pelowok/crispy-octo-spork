@@ -223,8 +223,8 @@
     },
     {
       "name": "The Emerald Voyager",
-      "type": "Exploration",
-      "placeOfOrigin": "Luskan",
+      "type": "Cargo",
+      "placeOfOrigin": "Daggerford",
       "destination": "Icewind Dale",
       "Owner": {
         "name": "Cedric the Seafarer",
